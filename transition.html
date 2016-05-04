@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        p{
+            border: medium solid black;
+            margin: 2px;
+            padding: 2px;
+        }
+        #banana{
+            border: medium dotted gray;
+            font-style: italic;
+            -webkit-transition-delay: 10ms;
+            -webkit-transition-duration: 250ms;
+        }
+        #banana:hover{
+            -webkit-animation-delay: 100ms;
+            -webkit-animation-duration: 500ms;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-timing-function: linear;
+            -webkit-animation-name: 'GrowShrink';
+        }
+        @-webkit-keyframes GrowShrink {
+            from{
+                font-size: x-small;
+                border:medium dotted black;
+                color: aqua;
+            }
+
+            to{
+                font-size: x-large;
+                border-right:medium solid white;
+                background: green;
+                color: white;
+                padding: 4px;
+            }
+        }
+    </style>
+</head>
+<body>
+<p>United in communion with the Latin Church before the East–West Schism in 1054,
+    and with the Oriental churches for the first quarter of its history,
+    Eastern Orthodoxy spread throughout the Roman and later Byzantine Empires and beyond,
+    playing a prominent role in European, Near Eastern, Slavic, and some African cultures.
+    <span id="banana">banana</span>
+    Its most prominent episcopal see is Constantinople.</p>
+</body>
+</html>
