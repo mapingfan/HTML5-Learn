@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example</title>
+    <script>
+        document.onreadystatechange = function () {
+            if (document.readyState == "loading"){
+                document.getElementById("press").innerHTML = "Button pressed ."
+            }
+        }
+    </script>
+</head>
+<body>
+<button id="press">press me </button>
+</body>
+</html>

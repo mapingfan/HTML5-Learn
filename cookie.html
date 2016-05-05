@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example</title>
+    <meta name="author" content="max">
+    <meta name="description" content="A simple example">
+</head>
+<body>
+<p id="cookiedata">
+
+</p>
+<button id="write">Add cookie</button>
+<button id="update">Update cookie</button>
+<script>
+    var cookieCount = 0;
+    document.getElementById("update").onclick = updateCookie;
+    document.getElementById("write").onclick = writeCookie;
+    readCookies()
+
+    function readCookies() {
+        document.getElementById("cookiedata").innerHTML = document.cookie
+    }
+    function updateCookie() {
+        cookieCount++;
+        document.cookie = "Cookie_"+cookieCount+"=Value_"+cookieCount
+        readCookies()
+    }
+    function writeCookie() {
+
+        document.cookie = "Cookie_"+cookieCount+"=Updated_"+cookieCount
+        readCookies()
+    }
+</script>
+</body>
+</html>
