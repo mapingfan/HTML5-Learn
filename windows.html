@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example</title>
+    <meta name="author" content="Max">
+    <meta name="description" content="A simple example">
+    <style>
+        table{
+            border-collapse: collapse;
+            border: thin solid black;
+        }
+        th,td{
+            padding: 4px;
+        }
+    </style>
+</head>
+<body>
+<button id="alert">Alert</button>
+<button id="confirm">Confirm</button>
+<button id="prompt">Prompt</button>
+<button id="modal">Modal Dialog</button>
+<script type="text/javascript">
+    var buttons = document.getElementsByTagName("button");
+    for (var index=0;index<buttons.length;index++){
+        buttons[index].onclick = handleButtonPress;
+    }
+
+    function handleButtonPress(e) {
+        if (e.target.id == "alert"){
+            window.alert("This is an alert");
+        } else if(e.target.id == "confirm"){
+            var confirmed = window.confirm("This is a confirm - do you want to proceed");
+            window.alert("confirmed?"+confirmed)
+        } else if (e.target.id == "prompt"){
+            var response = window.prompt("Enter a word", "hello");
+            alert("The word has"+response)
+        } else if (e.target.id == "modal"){
+            window.showModalDialog("http://www.baidu.com")
+        }
+
+    }
+</script>
+</body>
+</html>
