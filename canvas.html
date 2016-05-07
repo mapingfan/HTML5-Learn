@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example</title>
+    <meta name="author" content="max">
+    <meta name="description" content="Canvas example">
+    <style>
+        canvas{
+            border: medium solid black;
+        }
+    </style>
+</head>
+<body>
+<canvas id="canvas" width="600px" height="480px">
+    Your browser does not support canvas .
+</canvas>
+<script>
+    var canvas = document.getElementById("canvas").getContext("2d")
+    /*var count = 5;
+    for (var index=0;index<count;index++){
+
+        canvas.fillRect(index*50,50,30,30);
+        canvas.lineWidth=5;
+        canvas.lineJoin= "bevel";
+        canvas.strokeRect(index*50,90,30,30);
+        //canvas.clearRect(index*50,60,30,10)
+    }*/
+    var grad = canvas.createLinearGradient(0,0,100,80)
+    grad.addColorStop(0,"red")
+    grad.addColorStop(0.5,"green")
+    grad.addColorStop(1,"blue")
+    canvas.fillStyle = grad
+    canvas.fillRect(0,0,200,160)
+
+</script>
+</body>
+
+</html>
