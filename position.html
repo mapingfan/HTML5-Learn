@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example for position</title>
+    <style>
+        p {
+            border: medium solid blue;
+            background: #caebff;
+        }
+        #outter{
+            position: relative;
+            width: 250px;
+            margin: 50px 40px;
+            border-top: 3px solid red;
+        }
+        #inner{
+            position: absolute;
+            top:10px;
+            left: 20px;
+            background: #cccccc;
+        }
+        #oouter{
+            position: relative;
+            border-top: 10px solid green;
+        }
+    </style>
+</head>
+<body>
+<p>First paragraph .</p>
+<p >Second paragraph</p>
+<p id="specialpara">Third paragraph with id </p>
+<p id="special">Forth paragraph</p>
+<button type="button">static</button>
+<button type="button">relative</button>
+<button type="button">absolute</button>
+<button type="button">fixed</button>
+
+
+<div>
+<div id="oouter">
+    <div id="outter">
+        <div id="inner">This is text ...</div>
+    </div>
+</div>
+    </div>
+<script>
+    var buttons = document.getElementsByTagName("button")
+    var target = document.getElementById("specialpara")
+
+    for (var index = 0;index<buttons.length;index++){
+        buttons[index].onclick = function () {
+            target.style.position = this.innerHTML
+            target.style.top = "30px"
+            target.style.left = "30px"
+        }
+    }
+</script>
+</body>
+</html>

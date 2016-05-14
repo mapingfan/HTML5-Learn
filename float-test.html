@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Float-Test</title>
+    <style>
+        section{
+
+            border: 1px solid blue;
+
+        }
+        p{
+            margin: 0px;
+        }
+        footer{
+
+            border: 1px solid green;
+
+        }
+        img {
+            float: left;
+        }
+        .clearfix:after{
+            content: '.';
+            display: block;
+            height: 0;
+            visibility: hidden;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+<section class="clearfix">
+    <img src="images.jpg">
+    <p>It's fun to float</p>
+
+</section>
+<footer>
+    Here is the footer element that runs across the bottom of the page .
+</footer>
+</body>
+</html>
