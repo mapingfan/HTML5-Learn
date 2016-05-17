@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example</title>
+    <style>
+
+        h1{
+            font-variant: normal;
+        }
+        h1.special {
+
+            font-family: boomerangitalicregular;
+        }
+        p.special{
+            font-variant: normal;
+            font-size: 16px;
+            text-indent: -3em;
+        }
+        p{border: 3px solid blue; text-indent: 2em;
+        }
+        span{
+            border: 1px solid green;
+            word-spacing: 2em;
+            letter-spacing: 2em;
+        }
+        @font-face {
+
+            font-family: 'boomerangitalicregular';
+            src: url('boomerangitalic.woff2') format('woff2'),
+            url('boomerangitalic.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+
+        }
+    </style>
+</head>
+<body>
+<h1 class="special">This is a test paragraph</h1>
+<h1 >This is a test paragraph</h1>
+<p>哈哈哈</p>
+<p class="special">Another test paragraph</p>
+<p><span>This is a test paragraphThis is a test paragraphThis is a test paragraphThis is a test paragraphThis is a test paragraphThis is a test paragraphThis is a test paragraphThis is a test paragraphThis is a test paragraphThis is a test paragraphThis is a test paragraph</span></p>
+</body>
+</html>
