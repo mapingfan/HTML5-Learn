@@ -16,19 +16,19 @@
     var cookieCount = 0;
     document.getElementById("update").onclick = updateCookie;
     document.getElementById("write").onclick = writeCookie;
-    readCookies()
+    readCookies();
 
     function readCookies() {
         document.getElementById("cookiedata").innerHTML = document.cookie
     }
     function updateCookie() {
         cookieCount++;
-        document.cookie = "Cookie_"+cookieCount+"=Value_"+cookieCount
+        document.cookie = "Cookie_" + cookieCount + "=Value_" + cookieCount;
         readCookies()
     }
     function writeCookie() {
 
-        document.cookie = "Cookie_"+cookieCount+"=Updated_"+cookieCount
+        document.cookie = "Cookie_" + cookieCount + "=Updated_" + cookieCount;
         readCookies()
     }
 </script>

@@ -45,13 +45,13 @@
 </div>
     </div>
 <script>
-    var buttons = document.getElementsByTagName("button")
-    var target = document.getElementById("specialpara")
+    var buttons = document.getElementsByTagName("button");
+    var target = document.getElementById("specialpara");
 
     for (var index = 0;index<buttons.length;index++){
         buttons[index].onclick = function () {
-            target.style.position = this.innerHTML
-            target.style.top = "30px"
+            target.style.position = this.innerHTML;
+            target.style.top = "30px";
             target.style.left = "30px"
         }
     }

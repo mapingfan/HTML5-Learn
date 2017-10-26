@@ -39,9 +39,9 @@
         <p id="msg">Drop here</p>
     </div>
     <script>
-        var src = document.getElementById("src")
-        var target = document.getElementById("target")
-        var msg = document.getElementById("msg")
+        var src = document.getElementById("src");
+        var target = document.getElementById("target");
+        var msg = document.getElementById("msg");
         target.ondragenter = handleDrag;
         target.ondragover = handleDrag;
         function handleDrag(e) {
@@ -49,11 +49,11 @@
         }
         src.ondragstart = function (e) {
             e.target.classList.add("dragged")
-        }
+        };
         src.ondragend = function (e) {
-            e.target.classList.remove("dragged")
+            e.target.classList.remove("dragged");
             msg.innerHTML = "Drop here"
-        }
+        };
         src.ondrag = function (e) {
             msg.innerHTML = e.target.id
         }
